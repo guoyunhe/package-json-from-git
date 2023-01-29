@@ -9,6 +9,7 @@ export interface PackageJsonFromGit {
   homepage?: string;
   bugs?: { url: string };
   author?: { name: string; email: string };
+  funding?: string;
 }
 
 /**
@@ -25,6 +26,10 @@ export async function getPackageJsonFromGit(baseDir?: string): Promise<PackageJs
       const gitUrlInfo = gitUrlParse(gitUrl);
       const httpsGitUrl = gitUrlInfo.toString('https');
       const homepage = httpsGitUrl.substring(0, httpsGitUrl.length - 4);
+      const funding: string | undefined = undefined;
+      if (gitUrlInfo.source === 'github.com') {
+        const funding = `https://github.com/sponsors/${gitUrlInfo.owner}`;
+      }
       result = {
         ...result,
         homepage: homepage + '#readme',
@@ -32,6 +37,7 @@ export async function getPackageJsonFromGit(baseDir?: string): Promise<PackageJs
           url: homepage + '/issues',
         },
         repository: { type: 'git', url: 'git+' + httpsGitUrl },
+        funding,
       };
     }
     if (latest) {

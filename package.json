@@ -1,6 +1,6 @@
 {
   "name": "package-json-from-git",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/guoyunhe/package-json-from-git#readme",
   "bugs": {
     "url": "https://github.com/guoyunhe/package-json-from-git/issues"
@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/guoyunhe/package-json-from-git.git"
   },
+  "funding": "https://github.com/sponsors/guoyunhe",
   "author": {
     "name": "Guo Yunhe",
     "email": "i@guoyunhe.me"
@@ -30,7 +31,7 @@
     "watch": "node-scripts watch"
   },
   "prettier": {
-    "printWidth": 120,
+    "printWidth": 100,
     "singleQuote": true
   },
   "eslintConfig": {
