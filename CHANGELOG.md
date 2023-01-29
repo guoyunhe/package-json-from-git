@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0 - 2023-01-29
+
+- Remove `commander` dependency
+
 ## 1.1.0 - 2023-01-29
 
 - Add `funding` field into return data
