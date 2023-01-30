@@ -31,6 +31,17 @@ getPackageJsonFromGit().then((data) => {
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guoyunhe/package-json-from-git.git"
-  }
+  },
+  "funding": "https://github.com/sponsors/guoyunhe"
 }
+```
+
+By default, the function read `process.cwd()`, if your git repo is in other position, use:
+
+```js
+import { getPackageJsonFromGit } from 'package-json-from-git';
+
+getPackageJsonFromGit('path/to/git/repo').then((data) => {
+  console.log(data);
+});
 ```
