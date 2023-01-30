@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1 - 2023-01-30
+
+- Update README
+
 ## 1.2.0 - 2023-01-29
 
 - Remove `commander` dependency
