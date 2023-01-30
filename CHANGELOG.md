@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.2 - 2023-01-30
+
+- Fix undefined `funding`
+
 ## 1.2.1 - 2023-01-30
 
 - Update README

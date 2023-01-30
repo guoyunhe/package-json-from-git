@@ -26,9 +26,9 @@ export async function getPackageJsonFromGit(baseDir?: string): Promise<PackageJs
       const gitUrlInfo = gitUrlParse(gitUrl);
       const httpsGitUrl = gitUrlInfo.toString('https');
       const homepage = httpsGitUrl.substring(0, httpsGitUrl.length - 4);
-      const funding: string | undefined = undefined;
+      let funding: string | undefined = undefined;
       if (gitUrlInfo.source === 'github.com') {
-        const funding = `https://github.com/sponsors/${gitUrlInfo.owner}`;
+        funding = `https://github.com/sponsors/${gitUrlInfo.owner}`;
       }
       result = {
         ...result,
